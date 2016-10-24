@@ -29,7 +29,7 @@ angular.module('myApp')
       $scope.loading = true;
       $http.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
-          key: 'AIzaSyDiByKCET1fLAuBHJL462BXx2lnKXce6so',
+          key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
           type: 'video',
           maxResults: '10',
           pageToken: isNewQuery ? '' : $scope.nextPageToken,
