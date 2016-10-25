@@ -82,7 +82,7 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
     }
     for (var i = data.items.length - 1; i >= 0; i--) {
       results.push({
-        id: data.items[i].id.videoId,
+        id: data.items[i].contentDetails.videoId,
         title: data.items[i].snippet.title,
         description: data.items[i].snippet.description,
         thumbnail: data.items[i].snippet.thumbnails.default.url,

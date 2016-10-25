@@ -48,7 +48,7 @@ angular.module('myApp')
                 params: {
                     key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
                     maxResults: '50',
-                    part: 'snippet',
+                    part: 'id,snippet,contentDetails',
                     playlistId: _playListId
                 }
             })
