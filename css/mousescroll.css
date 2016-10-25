@@ -42,8 +42,7 @@
 
 .selector {
     max-width: 100%;
-    overflow: scroll;
-
+    overflow-x: scroll;
     width: 100%;
     display: block;
 }
