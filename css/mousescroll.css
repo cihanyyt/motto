@@ -3,12 +3,12 @@
 }
 
 .selector-page ul li h5 {
-    font-size: 22px;
-    margin-top: 19px;
+    font-size: 26px;
+    margin-top: 14px;
 }
 
 .selector-page ul li p {
-    font-size: 14px;
+    font-size: 10px;
     margin: 0;
 }
 
@@ -22,8 +22,8 @@
 .selector-page ul li {
     text-align: center;
     display: inline-block;
-    max-width: 250px;
-    padding: 30px 20px;
+    max-width: 100px;
+    padding: 10px 10px;
     border-radius: 4px;
     white-space: normal;
 }
@@ -31,7 +31,7 @@
 .selector-page ul {
     font-size: 0;
     list-style: none;
-    padding: 25px 0;
+    padding: 10px 0;
     display: inline-block;
     white-space: nowrap;
 }

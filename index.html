@@ -18,72 +18,72 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body ng-app="myApp" ng-controller="VideosController">
 
-<div class="selector-page">
-  <div class="selector">
-    <ul>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-      <li>
-        <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-        <h5>Admin</h5>
-        <p>In charge of managing users and content within the team</p>
-      </li>
-    </ul>
-  </div>
-</div>
+    <ons-modal var="modal" ng-click="youtube.player.stopVideo(); modal.hide();">
+        <div id="player">
+            <div id="placeholder" style="width: 100%"></div>
+        </div>
+    </ons-modal>
+
+    <ons-tabbar>
+        <ons-tab page="html/search.html" persistent no-reload active="true" icon="fa fa-search" label="Search"></ons-tab>
+        <ons-tab page="html/history.html" persistent no-reload  icon="fa fa-history" label="History"></ons-tab>
+    </ons-tabbar>
 
 <!--
-  <ons-modal var="modal" ng-click="youtube.player.stopVideo(); modal.hide();">
-    <div id="player">
-      <div id="placeholder" style="width: 100%"></div>
+    <div class="selector-page">
+        <div class="selector">
+            <ul>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+                <li>
+                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                    <h5>Admin</h5>
+                    <p>In charge of managing users and content within the team</p>
+                </li>
+            </ul>
+        </div>
     </div>
-  </ons-modal>
-
-  <ons-tabbar>
-
-    <ons-tab page="html/search.html" persistent no-reload active="true" icon="fa fa-search" label="Search"></ons-tab>
-    <ons-tab page="html/history.html" persistent no-reload  icon="fa fa-history" label="History"></ons-tab>
-  </ons-tabbar>
 -->
 </body>
 </html>
