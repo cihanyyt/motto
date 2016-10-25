@@ -1,37 +1,43 @@
 .selector-page ul li:hover {
-    background-color: #f8f8f6;
-}
-
-.selector-page ul li h5 {
-    font-size: 12px;
-    margin-top: 20px;
-}
-
-.selector-page ul li p {
-    font-size: 12px;
-    margin: 0;
+    background-color: #f82c38;
 }
 
 .selector-page ul li.selected {
-    background-color: #baefb3;
+    background-color: #ef37c5;
     box-shadow: inset 0 0 0 1px #30c51d;
 }
 .selector-page ul li + li {
-    margin-left: 2px;
+    margin-left: 10px;
 }
 .selector-page ul li {
     text-align: center;
     display: inline-block;
-    max-width: 100px;
-    padding: 2px 2px;
-    border-radius: 4px;
+    max-width: 120px;
+    min-width: 120px;
+    max-height: 140px;
+    min-height: 140px;
     white-space: normal;
+}
+
+.selector-page button {
+    background-color: transparent;
+    max-width: 120px;
+    min-width: 120px;
+    max-height: 140px;
+    min-height: 140px;
+
+}
+
+.selector-page img {
+    height: 104px;
+    width: 104px;
+    font-size: 20px;
 }
 
 .selector-page ul {
     font-size: 0;
     list-style: none;
-    padding: 10px 0;
+    padding: 5px 0;
     display: inline-block;
     white-space: nowrap;
 }
