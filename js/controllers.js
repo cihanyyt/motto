@@ -26,7 +26,7 @@ angular.module('myApp')
     $scope.loading = false;
 
 
-    $scope.search = function (isNewQuery) {
+    $scope.search = function (channelName,isNewQuery) {
       $scope.loading = true;
       $http.get('https://www.googleapis.com/youtube/v3/channels', {
         params: {
@@ -35,7 +35,7 @@ angular.module('myApp')
           maxResults: '50',
           pageToken: isNewQuery ? '' : $scope.nextPageToken,
           part: 'id, snippet, contentDetails',
-          forUsername: 'GoogleDevelopers'
+          forUsername: channelName
         }
       })
       .success( function (data) {
