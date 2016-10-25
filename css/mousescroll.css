@@ -11,12 +11,12 @@
 }
 .selector-page ul li {
     text-align: center;
-    display: inline-block;
+    display: table-cell;
     max-width: 120px;
     min-width: 120px;
     max-height: 140px;
     min-height: 140px;
-    white-space: normal;
+    white-space: pre-line;
 }
 
 .selector-page button {
