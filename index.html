@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.4/build/css/onsenui.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.4/build/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body ng-app="myApp" ng-controller="VideosController">
@@ -27,63 +26,102 @@
         </div>
     </ons-modal>
 
-    <ons-tabbar>
-        <ons-tab page="html/search.html" persistent no-reload active="true" icon="fa fa-search" label="Search"></ons-tab>
-        <ons-tab page="html/history.html" persistent no-reload  icon="fa fa-history" label="History"></ons-tab>
-    </ons-tabbar>
+    <ons-page>
 
-<!--
-    <div class="selector-page">
-        <div class="selector">
-            <ul>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-                <li>
-                    <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
-                    <h5>Admin</h5>
-                    <p>In charge of managing users and content within the team</p>
-                </li>
-            </ul>
+        <ons-toolbar id="searchToolbar" style="position: fixed;" fixed-style>
+            <div class="center youtube-toolbar">MOTTO</div>
+        </ons-toolbar>
+
+        <div class="search-bar youtube-toolbar">
+            <form ng-submit="search(true)">
+                <input type="search" class="search-input" placeholder="Search for videos in YouTube" ng-model="query">
+            </form>
         </div>
-    </div>
--->
+
+        <ons-members id="membersToolbar" style="height: 80%">
+                <div class="selector-page">
+                    <div class="selector">
+                        <ul>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                            <li>
+                                <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" height="90">
+                                <h5>Admin</h5>
+                                <p>In charge of managing users and content within the team</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </ons-members>
+
+        <ons-list class="after-search-bar">
+            <ons-list-item modifier="tappable" class="list-item-container" ng-repeat="video in results track by $index" ng-click="modal.show(); launch(video, true)">
+                <ons-row>
+                    <ons-col width="95px">
+                        <img class="thumbnail" ng-src="{{ video.thumbnail }}">
+                    </ons-col>
+                    <ons-col>
+                        <div class="title">
+                            {{ video.title }}
+                        </div>
+                        <div class="user">
+                            <ons-icon icon="fa fa-user"><span style="font-size: 12px"> {{ video.author ? video.author : "Anonymous" }}</span></ons-icon>
+                        </div>
+                        <div class="desc">
+                            {{ video.description }}
+                        </div>
+                    </ons-col>
+                    <ons-col width="40px"></ons-col>
+                </ons-row>
+            </ons-list-item>
+        </ons-list>
+        <p class="after-list" ng-show="results.length === 0">
+            <span ng-hide="loading">{{ label }}</span>
+            <span ng-show="loading"><ons-icon icon="fa fa-spinner" size="22px" spin="true"></ons-icon></span>
+        </p>
+        <p class="after-list" ng-show="results.length > 0 && nextPageToken !== ''">
+            <ons-button var="loadMoreButton" style="background-color: #e52d27" ng-click="loadMoreButton.startSpin(); loadMoreButton.setDisabled(true); search(false)">Load more videos</ons-button>
+        </p>
+    </ons-page>
+
 </body>
 </html>
