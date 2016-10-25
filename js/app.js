@@ -80,11 +80,11 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
     if (!append) {
       results.length = 0;
     }
-    for (var i = data.items.length - 1; i >= 0; i--) {
+    for (var i = 0 ; i <= data.items.length; i++) {
       results.push({
         id: data.items[i].contentDetails.videoId,
         title: data.items[i].snippet.title,
-        description: data.items[i].snippet.description,
+        description: data.items[i].snippet.publishedAt,
         thumbnail: data.items[i].snippet.thumbnails.default.url,
         author: data.items[i].snippet.channelTitle
       });

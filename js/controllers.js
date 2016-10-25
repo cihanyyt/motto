@@ -25,6 +25,7 @@ angular.module('myApp')
     $scope.label = 'You haven\'t searched for any video yet!';
     $scope.loading = false;
 
+
     $scope.search = function (isNewQuery) {
       $scope.loading = true;
       $http.get('https://www.googleapis.com/youtube/v3/channels', {
@@ -34,7 +35,7 @@ angular.module('myApp')
           maxResults: '50',
           pageToken: isNewQuery ? '' : $scope.nextPageToken,
           part: 'id, snippet, contentDetails',
-          forUsername: this.query
+          forUsername: 'GoogleDevelopers'
         }
       })
       .success( function (data) {
@@ -47,8 +48,9 @@ angular.module('myApp')
             $http.get('https://www.googleapis.com/youtube/v3/playlistItems', {
                 params: {
                     key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
-                    maxResults: '50',
+                    maxResults: '20',
                     part: 'id,snippet,contentDetails',
+                    order: 'date',
                     playlistId: _playListId
                 }
             })
