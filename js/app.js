@@ -80,25 +80,27 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
     if (!append) {
       results.length = 0;
     }
-    for (var i = 0 ; i <= data.items.length; i++) {
-      if(data.items[i].id.kind == "youtube#video" ) {
-        results.push({
-          id: data.items[i].id.videoId,
-          title: data.items[i].snippet.title,
-          description: data.items[i].snippet.publishedAt,
-          thumbnail: data.items[i].snippet.thumbnails.high.url,
-          author: data.items[i].snippet.channelTitle
-        });
-      }
-      else if(data.items[i].kind == "youtube#playlistItem"){
-        results.push({
-          id: data.items[i].contentDetails.videoId,
-          title: data.items[i].snippet.title,
-          description: data.items[i].snippet.publishedAt,
-          thumbnail: data.items[i].snippet.thumbnails.high.url,
-          author: data.items[i].snippet.channelTitle
-        });
-      }
+    for (var i = 0 ; i < data.items.length; i++) {
+        if(data.items[i].kind == "youtube#searchResult" ) {
+            if(data.items[i].id.kind == "youtube#video" ) {
+                results.push({
+                    id: data.items[i].id.videoId,
+                    title: data.items[i].snippet.title,
+                    description: data.items[i].snippet.publishedAt,
+                    thumbnail: data.items[i].snippet.thumbnails.high.url,
+                    author: data.items[i].snippet.channelTitle
+                });
+            }
+        }
+        else if(data.items[i].kind == "youtube#playlistItem"){
+            results.push({
+                id: data.items[i].contentDetails.videoId,
+                title: data.items[i].snippet.title,
+                description: data.items[i].snippet.publishedAt,
+                thumbnail: data.items[i].snippet.thumbnails.high.url,
+                author: data.items[i].snippet.channelTitle
+            });
+        }
     }
     return results;
   }
@@ -119,6 +121,5 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
   this.getHistory = function () {
     return history;
   };
-
 }]);
 
