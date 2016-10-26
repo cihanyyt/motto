@@ -25,9 +25,9 @@ angular.module('myApp')
     $scope.label = 'You haven\'t searched for any video yet!';
     $scope.loading = false;
 
-
     $scope.search = function (channelName,isNewQuery) {
       $scope.loading = true;
+
       $http.get('https://www.googleapis.com/youtube/v3/channels', {
         params: {
           key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
@@ -79,7 +79,40 @@ angular.module('myApp')
         $scope.loadMoreButton.stopSpin();
         $scope.loadMoreButton.setDisabled(false);
         $scope.loading = false;
-      })
-      ;
+      });
     };
+
+    $scope.searchByChannel = function (channelName,isNewQuery) {
+        $scope.loading = true;
+
+        $http.get('https://www.googleapis.com/youtube/v3/search', {
+            params: {
+                key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
+                maxResults: '50',
+                pageToken: isNewQuery ? '' : $scope.nextPageToken,
+                part: 'id,snippet',
+                order: 'date',
+                channelId: channelName
+            }
+        })
+        .success( function (data) {
+            if (data.items.length === 0) {
+                $scope.label = 'No results were found!';
+            }
+            else {
+                VideosService.listResults(data, $scope.nextPageToken && !isNewQuery);
+                $scope.nextPageToken = data.nextPageToken;
+                $log.info(data);
+            }
+        })
+        .error( function () {
+            $log.info('Search error');
+        })
+        .finally( function () {
+            $scope.loadMoreButton.stopSpin();
+            $scope.loadMoreButton.setDisabled(false);
+            $scope.loading = false;
+        });
+    };
+
 });

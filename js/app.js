@@ -81,13 +81,24 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
       results.length = 0;
     }
     for (var i = 0 ; i <= data.items.length; i++) {
-      results.push({
-        id: data.items[i].contentDetails.videoId,
-        title: data.items[i].snippet.title,
-        description: data.items[i].snippet.publishedAt,
-        thumbnail: data.items[i].snippet.thumbnails.default.url,
-        author: data.items[i].snippet.channelTitle
-      });
+      if(data.items[i].id.kind == "youtube#video" ) {
+        results.push({
+          id: data.items[i].id.videoId,
+          title: data.items[i].snippet.title,
+          description: data.items[i].snippet.publishedAt,
+          thumbnail: data.items[i].snippet.thumbnails.default.url,
+          author: data.items[i].snippet.channelTitle
+        });
+      }
+      else if(data.items[i].kind == "youtube#playlistItem"){
+        results.push({
+          id: data.items[i].contentDetails.videoId,
+          title: data.items[i].snippet.title,
+          description: data.items[i].snippet.publishedAt,
+          thumbnail: data.items[i].snippet.thumbnails.default.url,
+          author: data.items[i].snippet.channelTitle
+        });
+      }
     }
     return results;
   }
