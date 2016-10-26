@@ -48,7 +48,7 @@ angular.module('myApp')
             $http.get('https://www.googleapis.com/youtube/v3/playlistItems', {
                 params: {
                     key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
-                    maxResults: '20',
+                    maxResults: '50',
                     part: 'id,snippet,contentDetails',
                     order: 'date',
                     playlistId: _playListId
