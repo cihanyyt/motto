@@ -11,7 +11,6 @@ angular.module('myApp')
       $scope.youtube = VideosService.getYoutube();
       $scope.results = VideosService.getResults();
       $scope.history = VideosService.getHistory();
-      $scope.loadd;
     }
 
 
@@ -96,6 +95,13 @@ angular.module('myApp')
 
     };
 
+    $scope.reload =function() {
+      if($scope.lastChannelType == "channel")
+        $scope.searchByChannel($scope.lastChannel,false);
+      else
+        $scope.search($scope.lastChannel,false);
+    }
+
     $scope.launch = function (video, archive) {
       VideosService.launchPlayer(video.id, video.title);
       if (archive) {
@@ -107,9 +113,16 @@ angular.module('myApp')
     $scope.nextPageToken = '';
     $scope.label = 'You haven\'t searched for any video yet!';
     $scope.loading = false;
+    $scope.lastChannel = "";
+    $scope.lastChannelType = "";
 
     $scope.search = function (channelName,isNewQuery) {
       $scope.loading = true;
+      if(isNewQuery) {
+        $scope.lastChannel = channelName;
+        $scope.lastChannelType = "user";
+      }
+
 
       $http.get('https://www.googleapis.com/youtube/v3/channels', {
         params: {
@@ -118,7 +131,7 @@ angular.module('myApp')
           maxResults: '50',
           pageToken: isNewQuery ? '' : $scope.nextPageToken,
           part: 'id, snippet, contentDetails',
-          forUsername: channelName
+          forUsername: $scope.lastChannel
         }
       })
       .success( function (data) {
@@ -132,6 +145,7 @@ angular.module('myApp')
                 params: {
                     key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
                     maxResults: '50',
+                    pageToken: isNewQuery ? '' : $scope.nextPageToken,
                     part: 'id,snippet,contentDetails',
                     order: 'date',
                     playlistId: _playListId
@@ -167,6 +181,10 @@ angular.module('myApp')
 
     $scope.searchByChannel = function (channelName,isNewQuery) {
         $scope.loading = true;
+        if(isNewQuery) {
+          $scope.lastChannel = channelName;
+          $scope.lastChannelType = "channel";
+        }
 
         $http.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
@@ -175,7 +193,7 @@ angular.module('myApp')
                 pageToken: isNewQuery ? '' : $scope.nextPageToken,
                 part: 'id,snippet',
                 order: 'date',
-                channelId: channelName
+                channelId: $scope.lastChannel
             }
         })
         .success( function (data) {

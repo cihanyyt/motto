@@ -38,7 +38,7 @@
 
             <script type="text/javascript">
             $(document).ready(function() {
-                $('#avatarBox').delay(2000).fadeIn(100);
+                $('#avatarBox').delay(4000).fadeIn(100);
             });
             </script>
 
@@ -54,7 +54,7 @@
             </div>
             <script>
             $( document ).ready(function() {
-                $("#animated_moto").delay(2000).fadeOut(0);
+                $("#animated_moto").delay(4000).fadeOut(0);
             });
             </script>
 
@@ -88,7 +88,7 @@
             </p>
 
             <p class="after-list" ng-show="results.length > 0 && nextPageToken !== ''">
-                <ons-button var="loadMoreButton" style="background-color: #e52d27" ng-click="loadMoreButton.startSpin(); loadMoreButton.setDisabled(true); search(false)">Load more videos</ons-button>
+                <ons-button var="loadMoreButton" style="background-color: #e52d27" ng-click="loadMoreButton.startSpin(); loadMoreButton.setDisabled(true); reload()">Load more videos</ons-button>
             </p>
 
         </ons-page>
