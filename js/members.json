@@ -1,8 +1,10 @@
 [
-    {"name":"cihan yeşilyurt",		"id":"UCBDlVKLZLjWMDdE1jk6KSKw", 	"type":"channel", 	"avatar":""},
-    {"name":"Altın Elbiseli Adam", 	"id":"smoothoperatorRed5",			"type":"user", 		"avatar":""},
-    {"name":"Gizmo Vlogs", 			"id":"UCFNM2TgHPlVLCKip7uX-jBQ",	"type":"channel", 	"avatar":""},
-    {"name":"Yoldan Çık", 			"id":"UCl7zn2Ym0Hu_MPPN5aMsWug",	"type":"channel", 	"avatar":""},
-    {"name":"GoPro", 				"id":"GoProCamera",					"type":"user", 		"avatar":""},
-    {"name":"RIDERS OF BİLGİ", 		"id":"UCJY52B9azQA1OB-IZLW--_w",	"type":"channel", 	"avatar":""}
+    {"name":"cihan yeşilyurt",			"id":"UCBDlVKLZLjWMDdE1jk6KSKw", 	"type":"channel", 	"avatar":""},
+    {"name":"Altın Elbiseli Adam", 		"id":"smoothoperatorRed5",			"type":"user", 		"avatar":""},
+    {"name":"Gizmo Vlogs", 				"id":"UCFNM2TgHPlVLCKip7uX-jBQ",	"type":"channel", 	"avatar":""},
+    {"name":"Yoldan Çık", 				"id":"UCl7zn2Ym0Hu_MPPN5aMsWug",	"type":"channel", 	"avatar":""},
+    {"name":"GoPro", 					"id":"GoProCamera",					"type":"user", 		"avatar":""},
+    {"name":"RIDERS OF BİLGİ", 			"id":"UCJY52B9azQA1OB-IZLW--_w",	"type":"channel", 	"avatar":""},
+    {"name":"Motosiklet Etkinlikleri", 	"id":"motoetki",					"type":"user", 		"avatar":""},
+    {"name":"Kırmızı Başlıklı Adam", 	"id":"UCtXQKhztEGSCdHSqqGXVabA",	"type":"channel", 	"avatar":""}
 ]
