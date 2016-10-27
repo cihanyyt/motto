@@ -1,5 +1,6 @@
 .selector-page ul li:hover {
     background-color: #f82c38;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .selector-page ul li.selected {
