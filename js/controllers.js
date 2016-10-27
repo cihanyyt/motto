@@ -31,37 +31,69 @@ angular.module('myApp')
 
     $scope.getAvatars = function () {
       var i = 0;
-      while($scope.myArr.length > i) {
-        i++;
-        $http.get('https://www.googleapis.com/youtube/v3/channels', {
-          params: {
-            key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
-            type: 'channel',
-            maxResults: '50',
-            part: 'id, snippet, contentDetails',
-            forUsername: $scope.myArr[i].id
-          }
+        while($scope.myArr.length > i) {
+          
+          if($scope.myArr[i].type == 'user')
+          {
+            $http.get('https://www.googleapis.com/youtube/v3/channels', {
+            params: {
+              key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
+              type: 'channel',
+              maxResults: '50',
+              part: 'id, snippet, contentDetails',
+              forUsername: $scope.myArr[i].id
+            }
+          })
+          .success( function (data) {
+            if (data.items.length === 0) {
+              $scope.label = 'No results were found!';
+            }
+            else {
+              for (var i = $scope.myArr.length - 1; i >= 0; i--) {
+                if($scope.myArr[i].name == data.items[0].snippet.title)
+                    $scope.myArr[i].avatar = data.items[0].snippet.thumbnails.medium.url;
+              }
+            }
+        })
+        .error( function () {
+          $log.info('Search error');
+        })
+        .finally( function () {
+          $scope.loadMoreButton.stopSpin();
+          $scope.loadMoreButton.setDisabled(false);
+          $scope.loading = false;
+        });
+        } else {
+           $http.get('https://www.googleapis.com/youtube/v3/channels', {
+            params: {
+                key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
+                part: 'id,snippet,contentDetails',
+                id: $scope.myArr[i].id
+            }
         })
         .success( function (data) {
-          if (data.items.length === 0) {
-            $scope.label = 'No results were found!';
-          }
-          else {
-            for (var i = $scope.myArr.length - 1; i >= 0; i--) {
-              if($scope.myArr[i].name == data.items[0].snippet.title)
-                  $scope.myArr[i].avatar = data.items[0].snippet.thumbnails.medium.url;
+            if (data.items.length === 0) {
+              $scope.label = 'No results were found!';
             }
-          }
-      })
-      .error( function () {
-        $log.info('Search error');
-      })
-      .finally( function () {
-        $scope.loadMoreButton.stopSpin();
-        $scope.loadMoreButton.setDisabled(false);
-        $scope.loading = false;
-      });
+            else {
+              for (var k = $scope.myArr.length - 1; k >= 0; k--) {
+                if($scope.myArr[k].name == data.items[0].snippet.title)
+                    $scope.myArr[k].avatar = data.items[0].snippet.thumbnails.medium.url;
+              }
+            }
+        })
+        .error( function () {
+            $log.info('Search error');
+        })
+        .finally( function () {
+            $scope.loadMoreButton.stopSpin();
+            $scope.loadMoreButton.setDisabled(false);
+            $scope.loading = false;
+        });
+        }
+        i++;
       }
+
     };
 
     $scope.launch = function (video, archive) {

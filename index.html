@@ -31,7 +31,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#PriceBox').delay(2000).fadeIn(100);
+    $('#PriceBox').delay(1000).fadeIn(500);
 });
 </script>
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
             <ul class="selector">
                 <li ng-repeat="product in myArr">
                     <button ng-show= "product.type === 'user'" ng-click="search( product.id ,true)"> <img src = {{product.avatar}} > {{ product.name }} </button>
-                    <button ng-hide= "product.type === 'user'" ng-click="searchByChannel( product.id ,true)"> <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" > {{ product.name }} </button>
+                    <button ng-hide= "product.type === 'user'" ng-click="searchByChannel( product.id ,true)"> <img src= {{product.avatar}} > {{ product.name }} </button>
                 </li >
             </ul>
         </div>
