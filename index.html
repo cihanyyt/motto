@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MOTTO</title>
+    <meta charset="UTF-8">
+    <title>MOTTO</title>
 
     <script src="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.4/build/js/angular/angular.min.js"></script>
     <script src="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.4/build/js/onsenui.min.js"></script>
@@ -22,75 +22,75 @@
 
 <body ng-app="myApp" ng-controller="VideosController" onload="load()">
 
-    <ons-modal var="modal" ng-click="youtube.player.stopVideo(); modal.hide();">
-        <div id="player">
-            <div id="placeholder" style="width: 100%"></div>
+<ons-modal var="modal" ng-click="youtube.player.stopVideo(); modal.hide();">
+    <div id="player">
+        <div id="placeholder" style="width: 100%"></div>
+    </div>
+</ons-modal>
+
+<ons-page>
+
+    <ons-toolbar id="searchToolbar" style="position: fixed;" fixed-style>
+        <div class="center youtube-toolbar">MOTTO</div>
+    </ons-toolbar>
+
+
+    <div class="selector-page">
+        <div class="selector">
+            <ul>
+                <li>
+                    <button ng-click="search('smoothoperatorRed5',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" >Altın Elbiseli Adam</button>
+                </li>
+                <li>
+                    <button ng-click="search('Shmee150',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">Shmee150</button>
+                </li>
+                <li>
+                    <button ng-click="search('seenthroughglass',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">Seen Through Glass</button>
+                </li>
+                <li>
+                    <button ng-click="searchByChannel('UCBDlVKLZLjWMDdE1jk6KSKw',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">Cihan Yesilyurt</button>
+                </li>
+                <li>
+                    <button ng-click="search('MotorcuMuhabbeti',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">MotorcuMuhabbeti</button>
+                </li>
+                <li>
+                    <button ng-click="search('motoetki',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">motoetki</button>
+                </li>
+            </ul>
         </div>
-    </ons-modal>
-
-    <ons-page>
-
-        <ons-toolbar id="searchToolbar" style="position: fixed;" fixed-style>
-            <div class="center youtube-toolbar">MOTTO</div>
-        </ons-toolbar>
-
-
-        <div class="selector-page">
-            <div class="selector">
-                <ul>
-                    <li>
-                        <button ng-click="search('smoothoperatorRed5',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" >Altın Elbiseli Adam</button>
-                    </li>
-                    <li>
-                        <button ng-click="search('Shmee150',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">Shmee150</button>
-                    </li>
-                    <li>
-                        <button ng-click="search('seenthroughglass',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">Seen Through Glass</button>
-                    </li>
-                    <li>
-                        <button ng-click="searchByChannel('UCBDlVKLZLjWMDdE1jk6KSKw',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">Cihan Yesilyurt</button>
-                    </li>
-                    <li>
-                        <button ng-click="search('MotorcuMuhabbeti',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">MotorcuMuhabbeti</button>
-                    </li>
-                    <li>
-                        <button ng-click="search('motoetki',true)"><img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png">motoetki</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    </div>
     </div>
 
 
-        <ons-list class="after-search-bar">
-            <ons-list-item modifier="tappable" class="list-item-container" ng-repeat="video in results track by $index" ng-click="modal.show(); launch(video, true)">
-                <ons-row>
-                    <ons-col width="195px">
-                        <img class="thumbnail" ng-src="{{ video.thumbnail }}">
-                    </ons-col>
-                    <ons-col>
-                        <div class="title">
-                            {{ video.title }}
-                        </div>
-                        <div class="user">
-                            <ons-icon icon="fa fa-user"><span style="font-size: 12px"> {{ video.author ? video.author : "Anonymous" }}</span></ons-icon>
-                        </div>
-                        <div class="desc">
-                            {{ video.description }}
-                        </div>
-                    </ons-col>
-                    <ons-col width="140px"></ons-col>
-                </ons-row>
-            </ons-list-item>
-        </ons-list>
-        <p class="after-list" ng-show="results.length === 0">
-            <span ng-hide="loading">{{ label }}</span>
-            <span ng-show="loading"><ons-icon icon="fa fa-spinner" size="122px" spin="true"></ons-icon></span>
-        </p>
-        <p class="after-list" ng-show="results.length > 0 && nextPageToken !== ''">
-            <ons-button var="loadMoreButton" style="background-color: #e52d27" ng-click="loadMoreButton.startSpin(); loadMoreButton.setDisabled(true); search(false)">Load more videos</ons-button>
-        </p>
-    </ons-page>
+    <ons-list class="after-search-bar">
+        <ons-list-item modifier="tappable" class="list-item-container" ng-repeat="video in results track by $index" ng-click="modal.show(); launch(video, true)">
+            <ons-row>
+                <ons-col width="195px">
+                    <img class="thumbnail" ng-src="{{ video.thumbnail }}">
+                </ons-col>
+                <ons-col>
+                    <div class="title">
+                        {{ video.title }}
+                    </div>
+                    <div class="user">
+                        <ons-icon icon="fa fa-user"><span style="font-size: 12px"> {{ video.author ? video.author : "Anonymous" }}</span></ons-icon>
+                    </div>
+                    <div class="desc">
+                        {{ video.description }}
+                    </div>
+                </ons-col>
+                <ons-col width="140px"></ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+    <p class="after-list" ng-show="results.length === 0">
+        <span ng-hide="loading">{{ label }}</span>
+        <span ng-show="loading"><ons-icon icon="fa fa-spinner" size="122px" spin="true"></ons-icon></span>
+    </p>
+    <p class="after-list" ng-show="results.length > 0 && nextPageToken !== ''">
+        <ons-button var="loadMoreButton" style="background-color: #e52d27" ng-click="loadMoreButton.startSpin(); loadMoreButton.setDisabled(true); search(false)">Load more videos</ons-button>
+    </p>
+</ons-page>
 
 </body>
 </html>
