@@ -13,6 +13,22 @@ angular.module('myApp')
       $scope.history = VideosService.getHistory();
     }
 
+
+    $scope.load = function () {
+        var xmlhttp = new XMLHttpRequest();
+        var url = "js/members.json";
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 ) {
+                myArr = JSON.parse(this.responseText);
+                return 5;
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+
+
     $scope.launch = function (video, archive) {
       VideosService.launchPlayer(video.id, video.title);
       if (archive) {

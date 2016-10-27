@@ -2,7 +2,7 @@
  * Created by Z003EUNW on 10/26/2016.
  */
 
-function load() {
+function loadd() {
     var xmlhttp = new XMLHttpRequest();
     var url = "js/members.json";
     var myArr;
