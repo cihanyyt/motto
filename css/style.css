@@ -63,13 +63,16 @@
   height: 140px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
+  margin-left: 5px
 }
 
 .title {
   font-weight: 500;
   line-height: 16px;
-  font-size: 15px;
+  font-size: 25px;
   margin-bottom: 6px;
+  margin-top: 5px;
+  margin-left: 10px
 }
 
 .user {
@@ -77,11 +80,17 @@
   opacity: 0.8;
   color: #e52d27;
   margin-bottom: 6px;
+  margin-left: 10px
 }
 
 .desc {
   line-height: 1.2;
   font-size: 13px;
+  margin-left: 10px;
+  max-height:70px;
+  -o-text-overflow: ellipsis;   /* Opera */
+  text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
+  overflow:hidden;              /* don't show excess chars */
 }
 
 #avatarBox {
@@ -95,9 +104,9 @@
 #animated_moto {
     position: relative;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 2s;
 }
 
 /* Safari 4.0 - 8.0 */
