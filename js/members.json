@@ -1,7 +1,8 @@
-{
-  "members":[
-    {"name":"UCBDlVKLZLjWMDdE1jk6KSKw", "type":"channel"},
-    {"name":"smoothoperatorRed5",	"type":"user"},
-    {"name":"Shmee150", "type":"user"}
-  ]
-}
+[
+    {"name":"Cihanyyt", "id":"UCBDlVKLZLjWMDdE1jk6KSKw", "type":"channel"},
+    {"name":"AEA", "id":"smoothoperatorRed5",	"type":"user"},
+    {"name":"Gizmo Vlogs", "id":"UCFNM2TgHPlVLCKip7uX-jBQ",	"type":"channel"},
+    {"name":"Yoldan Çık", "id":"UCl7zn2Ym0Hu_MPPN5aMsWug",	"type":"channel"},
+    {"name":"GoProCamera", "id":"GoProCamera",	"type":"user"},
+    {"name":"Riders of Bilgi", "id":"UCJY52B9azQA1OB-IZLW--_w",	"type":"channel"}
+]

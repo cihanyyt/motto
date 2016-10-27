@@ -20,8 +20,7 @@ angular.module('myApp')
 
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 ) {
-                myArr = JSON.parse(this.responseText);
-                return 5;
+                $scope.myArr = JSON.parse(this.responseText);
             }
         };
         xmlhttp.open("GET", url, true);
