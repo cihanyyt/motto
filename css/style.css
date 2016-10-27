@@ -46,15 +46,11 @@
 .after-search-bar {
     z-index: 1;
     word-wrap: break-word !important;
-        width: 70%;
-    max-width: 70%;
 }
 .after-list {
     color: #999;
     font-size: 15px;
     text-align: center;
-        width: 70%;
-    max-width: 70%;
 }
 
 .list-item-container {
@@ -67,16 +63,13 @@
   height: 140px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin-left: 5px
 }
 
 .title {
   font-weight: 500;
   line-height: 16px;
-  font-size: 25px;
+  font-size: 15px;
   margin-bottom: 6px;
-  margin-top: 5px;
-  margin-left: 10px
 }
 
 .user {
@@ -84,17 +77,11 @@
   opacity: 0.8;
   color: #e52d27;
   margin-bottom: 6px;
-  margin-left: 10px
 }
 
 .desc {
   line-height: 1.2;
   font-size: 13px;
-  margin-left: 10px;
-  max-height:70px;
-  -o-text-overflow: ellipsis;   /* Opera */
-  text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
-  overflow:hidden;              /* don't show excess chars */
 }
 
 #avatarBox {
