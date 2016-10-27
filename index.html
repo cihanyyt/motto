@@ -30,21 +30,17 @@
 
 <ons-page>
 
-    <ons-toolbar id="searchToolbar" style="position: fixed;" fixed-style>
-        <div class="center youtube-toolbar"> MOTTO </div>
-    </ons-toolbar>
-
-
     <div class="selector-page" >
         <div class="selector" >
-            <ul class="selector" ng-repeat="product in myArr">
-                <li>
+            <ul class="selector">
+                <li ng-repeat="product in myArr">
                     <button ng-show= "product.type === 'user'" ng-click="search( product.id ,true)"> <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" > {{ product.name }} </button>
                     <button ng-hide= "product.type === 'user'" ng-click="searchByChannel( product.id ,true)"> <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.med.png" > {{ product.name }} </button>
-                </li>
+                </li >
             </ul>
         </div>
     </div>
+
 
     <ons-list class="after-search-bar">
         <ons-list-item modifier="tappable" class="list-item-container" ng-repeat="video in results track by $index" ng-click="modal.show(); launch(video, true)">
