@@ -28,7 +28,9 @@
     min-height: 140px;
     border: transparent;
     font-weight: bold;
-
+    -o-text-overflow: ellipsis;   /* Opera */
+    text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
+    overflow:hidden;              /* don't show excess chars */
 }
 
 .selector-page img {
