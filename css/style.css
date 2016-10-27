@@ -46,11 +46,15 @@
 .after-search-bar {
     z-index: 1;
     word-wrap: break-word !important;
+        width: 70%;
+    max-width: 70%;
 }
 .after-list {
     color: #999;
     font-size: 15px;
     text-align: center;
+        width: 70%;
+    max-width: 70%;
 }
 
 .list-item-container {
