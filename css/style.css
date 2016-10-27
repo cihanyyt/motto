@@ -113,3 +113,7 @@
   line-height: 1.2;
   font-size: 13px;
 }
+
+#PriceBox {
+    display: none;   
+}

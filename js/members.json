@@ -1,8 +1,8 @@
 [
-    {"name":"Cihanyyt", "id":"UCBDlVKLZLjWMDdE1jk6KSKw", "type":"channel"},
-    {"name":"AEA", "id":"smoothoperatorRed5",	"type":"user"},
-    {"name":"Gizmo Vlogs", "id":"UCFNM2TgHPlVLCKip7uX-jBQ",	"type":"channel"},
-    {"name":"Yoldan Çık", "id":"UCl7zn2Ym0Hu_MPPN5aMsWug",	"type":"channel"},
-    {"name":"GoProCamera", "id":"GoProCamera",	"type":"user"},
-    {"name":"Riders of Bilgi", "id":"UCJY52B9azQA1OB-IZLW--_w",	"type":"channel"}
+    {"name":"cihan yeşilyurt",		"id":"UCBDlVKLZLjWMDdE1jk6KSKw", 	"type":"channel", 	"avatar":""},
+    {"name":"Altın Elbiseli Adam", 	"id":"smoothoperatorRed5",			"type":"user", 		"avatar":""},
+    {"name":"Gizmo Vlogs", 			"id":"UCFNM2TgHPlVLCKip7uX-jBQ",	"type":"channel", 	"avatar":""},
+    {"name":"Yoldan Çık", 			"id":"UCl7zn2Ym0Hu_MPPN5aMsWug",	"type":"channel", 	"avatar":""},
+    {"name":"GoPro", 				"id":"GoProCamera",					"type":"user", 		"avatar":""},
+    {"name":"Riders of Bilgi", 		"id":"UCJY52B9azQA1OB-IZLW--_w",	"type":"channel", 	"avatar":""}
 ]
