@@ -114,6 +114,9 @@
   font-size: 13px;
 }
 
-#PriceBox {
+#avatarBox {
+    display: none;   
+}
+#searchBox {
     display: none;   
 }
