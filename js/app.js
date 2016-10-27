@@ -86,7 +86,7 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
                 results.push({
                     id: data.items[i].id.videoId,
                     title: data.items[i].snippet.title,
-                    description: data.items[i].snippet.publishedAt,
+                    description: data.items[i].snippet.description,
                     thumbnail: data.items[i].snippet.thumbnails.high.url,
                     author: data.items[i].snippet.channelTitle
                 });
@@ -96,7 +96,7 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
             results.push({
                 id: data.items[i].contentDetails.videoId,
                 title: data.items[i].snippet.title,
-                description: data.items[i].snippet.publishedAt,
+                description: data.items[i].snippet.description,
                 thumbnail: data.items[i].snippet.thumbnails.high.url,
                 author: data.items[i].snippet.channelTitle
             });

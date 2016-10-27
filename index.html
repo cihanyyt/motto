@@ -32,14 +32,13 @@
 
             <ons-toolbar id="searchToolbar" style="position: fixed;" fixed-style>
                 <div class="center youtube-toolbar"> MOTTOBOOK </div>
-
             </ons-toolbar>
             
 
 
             <script type="text/javascript">
             $(document).ready(function() {
-                $('#avatarBox').delay(1000).fadeIn(100);
+                $('#avatarBox').delay(2000).fadeIn(100);
             });
             </script>
 
@@ -55,11 +54,11 @@
             </div>
             <script>
             $( document ).ready(function() {
-                $("#animated_moto").delay(1000).fadeOut(0);
+                $("#animated_moto").delay(2000).fadeOut(0);
             });
             </script>
 
-            <div id="animated_moto"><img src="wheelie.png" height="100px" width="100px"></img> </div>
+            <div id="animated_moto"><img src="wheelie.png" height="145px" width="145px"></img> </div>
 
             <ons-list class="after-search-bar">
                 <ons-list-item modifier="tappable" class="list-item-container" ng-repeat="video in results track by $index" ng-click="modal.show(); launch(video, true)">
