@@ -35,8 +35,7 @@
 
             <script type="text/javascript">
             $(document).ready(function() {
-                $('#avatarBox').delay(1000).fadeIn(500);
-                $('#searchBox').delay(1000).fadeIn(500);
+                $('#avatarBox').delay(100).fadeIn(100);
             });
             </script>
 
@@ -74,8 +73,8 @@
                 </ons-list-item>
             </ons-list>
 
-            <p id="searchBox" class="after-list" ng-show="results.length === 0">
-                <span ng-hide="loading">{{ label }}</span>
+            <p id="avatarBox" class="after-list" ng-show="results.length === 0">
+                <span ng-hide="loading" ng-init=searchByChannel("UCBDlVKLZLjWMDdE1jk6KSKw",true)></span>
                 <span ng-show="loading"><ons-icon icon="fa fa-spinner" size="122px" spin="true"></ons-icon></span>
             </p>
 
