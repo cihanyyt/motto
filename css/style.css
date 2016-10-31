@@ -22,8 +22,8 @@
 
 @media all and (orientation: landscape) {
   #player {
-    height: 90vh;
-    width: 90vw;
+    height: 70vh;
+    width: 70vw;
     margin: auto;
   }
 }
@@ -85,11 +85,11 @@
 }
 
 #avatarBox {
-    display: none;   
+    display: none;
 }
 
 #searchBox {
-    display: none;   
+    display: none;
 }
 
 #animated_moto {
