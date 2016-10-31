@@ -31,14 +31,14 @@ angular.module('myApp')
     $scope.getAvatars = function () {
       var i = 0;
         while($scope.myArr.length > i) {
-          
+
           if($scope.myArr[i].type == 'user')
           {
             $http.get('https://www.googleapis.com/youtube/v3/channels', {
             params: {
               key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
               type: 'channel',
-              maxResults: '50',
+              maxResults: '30',
               part: 'id, snippet, contentDetails',
               forUsername: $scope.myArr[i].id
             }
@@ -128,7 +128,7 @@ angular.module('myApp')
         params: {
           key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
           type: 'channel',
-          maxResults: '50',
+          maxResults: '10',
           pageToken: isNewQuery ? '' : $scope.nextPageToken,
           part: 'id, snippet, contentDetails',
           forUsername: $scope.lastChannel
@@ -144,7 +144,7 @@ angular.module('myApp')
             $http.get('https://www.googleapis.com/youtube/v3/playlistItems', {
                 params: {
                     key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
-                    maxResults: '50',
+                    maxResults: '10',
                     pageToken: isNewQuery ? '' : $scope.nextPageToken,
                     part: 'id,snippet,contentDetails',
                     order: 'date',
@@ -189,7 +189,7 @@ angular.module('myApp')
         $http.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                 key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
-                maxResults: '50',
+                maxResults: '10',
                 pageToken: isNewQuery ? '' : $scope.nextPageToken,
                 part: 'id,snippet',
                 order: 'date',
