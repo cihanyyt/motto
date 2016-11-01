@@ -54,39 +54,41 @@
             });
         </script>
 
-        <div id = "avatarBox" class="selector-page" >
-            <div class="selector" >
-                <ul class="selector">
-                    <li ng-repeat="product in myArr">
-                        <button ng-show= "product.type === 'user'" ng-click="search( product.id ,true)"> <img src = {{product.avatar}} > {{ product.name }} </button>
-                        <button ng-hide= "product.type === 'user'" ng-click="searchByChannel( product.id ,true)"> <img src= {{product.avatar}} > {{ product.name }} </button>
-                    </li >
-                </ul>
+        <div id = "avatarBox"  >
+            <div class="selector-page">
+                <div class="selector" >
+                    <ul class="selector">
+                        <li ng-repeat="product in myArr">
+                            <button ng-show= "product.type === 'user'" ng-click="search( product.id ,true)"> <img src = {{product.avatar}} > {{ product.name }} </button>
+                            <button ng-hide= "product.type === 'user'" ng-click="searchByChannel( product.id ,true)"> <img src= {{product.avatar}} > {{ product.name }} </button>
+                        </li >
+                    </ul>
+                </div>
             </div>
 
-                    <ons-list class="after-search-bar">
-            <ons-list-item modifier="tappable" class="list-item-container" ng-repeat="video in results track by $index" ng-click="modal.show(); launch(video, true)">
-                <ons-row>
-                    <ons-col width="195px">
-                    <img class="thumbnail" ng-src="{{ video.thumbnail }}">
-                    </ons-col>
-                    <ons-col>
-                        <div class="title">
-                        {{ video.title }}
-                        </div>
-                        <div class="user">
-                            <ons-icon icon="fa fa-user">
-                                <span style="font-size: 15px"> {{ video.author ? video.author : "Anonymous" }}</span>
-                            </ons-icon>
-                        </div>
-                        <div class="desc"> {{ video.description }} </div>
-                    </ons-col>
-                    <ons-col width="140px"></ons-col>
-                </ons-row>
-            </ons-list-item>
+            <ons-list class="after-search-bar">
+                <ons-list-item modifier="tappable" class="list-item-container" ng-repeat="video in results track by $index" ng-click="modal.show(); launch(video, true)">
+                    <ons-row>
+                        <ons-col width="195px">
+                        <img class="thumbnail" ng-src="{{ video.thumbnail }}">
+                        </ons-col>
+                        <ons-col>
+                            <div class="title">
+                            {{ video.title }}
+                            </div>
+                            <div class="user">
+                                <ons-icon icon="fa fa-user">
+                                    <span style="font-size: 15px"> {{ video.author ? video.author : "Anonymous" }}</span>
+                                </ons-icon>
+                            </div>
+                            <div class="desc"> {{ video.description }} </div>
+                        </ons-col>
+                        <ons-col width="140px"></ons-col>
+                    </ons-row>
+                </ons-list-item>
         </ons-list>
 
-        <p id="avatarBox" class="after-list" ng-show="results.length === 0">
+        <p class="after-list" ng-show="results.length === 0">
             <span ng-hide="loading" ng-init=searchByChannel("UCBDlVKLZLjWMDdE1jk6KSKw",true)></span>
             <span ng-show="loading">
                 <ons-icon icon="fa fa-spinner" size="122px" spin="true"></ons-icon>
@@ -98,13 +100,10 @@
         </p>
         
         </div>
-        
-
 
         <div id="animated_moto">
             <img src="wheelie.png" height="145px" width="145px"></img>
         </div>
-
 
     </ons-page>
 </body>
