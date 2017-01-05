@@ -87,6 +87,7 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
                     id: data.items[i].id.videoId,
                     title: data.items[i].snippet.title,
                     description: data.items[i].snippet.description,
+                    publishedAt: data.items[i].snippet.publishedAt,
                     thumbnail: data.items[i].snippet.thumbnails.medium.url,
                     author: data.items[i].snippet.channelTitle
                 });

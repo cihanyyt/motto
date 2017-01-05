@@ -59,29 +59,35 @@
 }
 
 .thumbnail {
-  width: 196px;
-  height: 110px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
+    width: 196px;
+    height: 110px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
 }
 
 .title {
-  font-weight: 500;
-  line-height: 16px;
-  font-size: 15px;
-  margin-bottom: 6px;
+    margin-left: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 15px;
+    margin-bottom: 6px;
 }
 
 .user {
-  font-size: 12px;
-  opacity: 0.8;
-  color: #e52d27;
-  margin-bottom: 6px;
+    margin-left: 10px;
+    font-size: 13px;
+    opacity: 0.8;
+    color: #9c1c19;
+    margin-bottom: 6px;
 }
 
 .desc {
-  line-height: 1.2;
-  font-size: 13px;
+    margin-left: 15px;
+    line-height: 1.2;
+    font-size: 13px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #avatarBox {
