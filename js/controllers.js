@@ -127,10 +127,9 @@ angular.module('myApp')
       $http.get('https://www.googleapis.com/youtube/v3/channels', {
         params: {
           key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
-          type: 'channel',
           maxResults: '10',
           pageToken: isNewQuery ? '' : $scope.nextPageToken,
-          part: 'id, snippet, contentDetails',
+          part: 'contentDetails',
           forUsername: $scope.lastChannel
         }
       })
@@ -146,7 +145,7 @@ angular.module('myApp')
                     key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
                     maxResults: '10',
                     pageToken: isNewQuery ? '' : $scope.nextPageToken,
-                    part: 'id,snippet,contentDetails',
+                    part: 'snippet,contentDetails',
                     order: 'date',
                     playlistId: _playListId
                 }
