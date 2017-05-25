@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="collection of best motovlogs and playlists">
-    <meta name="keywords" content="motorcyle,youtube,motovlog,motovlogger">
+    <meta name="keywords" content="motorcycles,youtube,motovlog,motovlogger,mottovlog">
     <meta name="author" content="Cihan Yeşilyurt">
     
-    <title>mottovlog</title>
+    <title>MottoVlog</title>
 
     <script src="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.4/build/js/angular/angular.min.js"></script>
     <script src="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.4/build/js/onsenui.min.js"></script>
@@ -38,8 +38,8 @@
 
     <ons-page>
         <header class="nav-down">
-            <ons-toolbar id="searchToolbar" style="position: fixed;" fixed-style>
-                <div class="center youtube-toolbar"> mottovlog </div>
+            <ons-toolbar id="searchToolbar" style="position: fixed; " fixed-style>
+                <div class="center youtube-toolbar"> <img src="header.png" ng-click="playlistByChannel(true)"></img> </div>
             </ons-toolbar>
         </header>
 
@@ -89,7 +89,7 @@
         </ons-list>
 
         <p class="after-list" ng-show="results.length === 0">
-            <span ng-hide="loading" ng-init=playlistByChannel("PL2fo7VTmySPR3sXP7uzms0_w6q26sTFvg",true)></span>
+            <span ng-hide="loading" ng-init=playlistByChannel(true)></span>
             <span ng-show="loading">
                 <ons-icon icon="fa fa-spinner" size="122px" spin="true"></ons-icon>
             </span>

@@ -216,10 +216,10 @@ angular.module('myApp')
     };
 
 
-    $scope.playlistByChannel = function (channelName,isNewQuery) {
+    $scope.playlistByChannel = function (isNewQuery) {
         $scope.loading = true;
         if(isNewQuery) {
-            $scope.lastChannel = channelName;
+            $scope.lastChannel = "PL2fo7VTmySPR3sXP7uzms0_w6q26sTFvg";
             $scope.lastChannelType = "channel";
         }
 
