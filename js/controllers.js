@@ -215,4 +215,42 @@ angular.module('myApp')
         });
     };
 
+
+    $scope.playlistByChannel = function (channelName,isNewQuery) {
+        $scope.loading = true;
+        if(isNewQuery) {
+            $scope.lastChannel = channelName;
+            $scope.lastChannelType = "channel";
+        }
+
+        $http.get('https://www.googleapis.com/youtube/v3/playlistItems', {
+            params: {
+                key: 'AIzaSyDDheDyEodFf3EPUqMw876deYCoqBIFeoU',
+                maxResults: '10',
+                pageToken: isNewQuery ? '' : $scope.nextPageToken,
+                part: 'snippet, contentDetails',
+                order: 'date',
+                playlistId: $scope.lastChannel
+            }
+        })
+            .success( function (data) {
+                if (data.items.length === 0) {
+                    $scope.label = 'No results were found!';
+                }
+                else {
+                    VideosService.listResults(data, $scope.nextPageToken && !isNewQuery);
+                    $scope.nextPageToken = data.nextPageToken;
+                    $log.info(data);
+                }
+            })
+            .error( function () {
+                $log.info('Search error');
+            })
+            .finally( function () {
+                $scope.loadMoreButton.stopSpin();
+                $scope.loadMoreButton.setDisabled(false);
+                $scope.loading = false;
+            });
+    };
+
 });

@@ -103,6 +103,17 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
                 author: data.items[i].snippet.channelTitle
             });
         }
+        else if(data.items[i].kind == "youtube#playlist"){
+            results.push({
+                id: data.items[i].contentDetails.videoId,
+                title: data.items[i].snippet.title,
+                description: data.items[i].snippet.description,
+                publishedAt: data.items[i].snippet.publishedAt,
+                thumbnail: data.items[i].snippet.thumbnails.medium.url,
+                author: data.items[i].snippet.channelTitle
+            });
+        }
+
     }
     return results;
   }
