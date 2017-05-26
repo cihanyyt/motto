@@ -71,6 +71,9 @@
     line-height: 16px;
     font-size: 17px;
     margin-bottom: 6px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .user {
@@ -81,6 +84,9 @@
     opacity: 0.8;
     color: #06019c;
     margin-bottom: 6px;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .desc {
@@ -91,7 +97,7 @@
     height: 45px;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 640px;
+    max-width: 400px;
     max-height: 45px;
 }
 
