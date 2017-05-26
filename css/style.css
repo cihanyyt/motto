@@ -65,26 +65,29 @@
 }
 
 .title {
+    text-align: right;
     margin-left: 10px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 16px;
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 6px;
 }
 
 .user {
+    text-align: right;
     margin-left: 10px;
     font-size: 13px;
     opacity: 0.8;
-    color: #9c1c19;
+    color: #06019c;
     margin-bottom: 6px;
 }
 
 .desc {
+    text-align: right;
     margin-left: 15px;
     line-height: 1.2;
     font-size: 13px;
-    height: 60px;
+    height: 45px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
