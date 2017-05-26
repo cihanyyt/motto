@@ -75,21 +75,21 @@ app.service('VideosService', ['$window', '$rootScope', '$log', function ($window
           if (elapsedYear == 1)
               asd = "published last year";
           else
-              asd = elapsedYear + "published years ago"
+              asd = "published " + elapsedYear + " years ago"
       }
       else if (mm - publishedMonth>0)
       {
           if (elapsedMonth == 1)
               asd = "published last month";
           else
-              asd = elapsedMonth + "published months ago"
+              asd = "published " + elapsedMonth + " months ago"
       }
       else if (dd - publishedDay > 0)
       {
           if (elapsedDay == 1)
               asd = "published yesterday";
           else
-              asd = elapsedDay + "published days ago"
+              asd = "published " + elapsedDay + " days ago"
       }
       else
       {

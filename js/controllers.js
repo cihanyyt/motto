@@ -13,7 +13,6 @@ angular.module('myApp')
       $scope.history = VideosService.getHistory();
     }
 
-
     $scope.loadd = function () {
         var xmlhttp = new XMLHttpRequest();
         var url = "js/members.json";
@@ -214,7 +213,6 @@ angular.module('myApp')
             $scope.loading = false;
         });
     };
-
 
     $scope.playlistByChannel = function (isNewQuery) {
         $scope.loading = true;
