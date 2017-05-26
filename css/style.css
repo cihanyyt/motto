@@ -65,7 +65,7 @@
 }
 
 .title {
-    text-align: right;
+    text-align: left;
     margin-left: 10px;
     font-weight: bold;
     line-height: 16px;
@@ -74,7 +74,8 @@
 }
 
 .user {
-    text-align: right;
+    text-align: left;
+    font-weight: bold;
     margin-left: 10px;
     font-size: 13px;
     opacity: 0.8;
@@ -83,13 +84,15 @@
 }
 
 .desc {
-    text-align: right;
+    text-align: left;
     margin-left: 15px;
     line-height: 1.2;
     font-size: 13px;
     height: 45px;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 640px;
+    max-height: 45px;
 }
 
 #avatarBox {
