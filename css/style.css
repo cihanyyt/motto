@@ -71,7 +71,7 @@
     line-height: 16px;
     font-size: 17px;
     margin-bottom: 6px;
-
+    max-width: 390px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -84,7 +84,7 @@
     opacity: 0.8;
     color: #06019c;
     margin-bottom: 6px;
-    
+    max-width: 390px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -97,7 +97,7 @@
     height: 45px;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 400px;
+    max-width: 390px;
     max-height: 45px;
 }
 
