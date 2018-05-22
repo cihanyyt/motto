@@ -1,4 +1,5 @@
 [
+  {"name":"GoPro",              	  "id":"GoProCamera",    			  "type":"user",   	  "avatar":""},
   {"name":"Tektabanca",               "id":"UCqUposHCyUyEtvn6UtwjPqA",    "type":"channel",   "avatar":""},
   {"name":"Altın Elbiseli Adam",      "id":"smoothoperatorRed5",          "type":"user",      "avatar":""},
   {"name":"Tuğra Elibuyuk",           "id":"tugraelibuyuk",               "type":"user",      "avatar":""},
